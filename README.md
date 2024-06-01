@@ -6,6 +6,8 @@
   <h4 align="center">A bot that automatically tweets (posts) on Twitter (X).</h4>
   <h4 align="center">I tweet about Technology, Programming/Coding, Anime, Nature and Travel.</h4>
    <p align="center">
+    <a href="https://cldfm8g5.status.cron-job.org/">Check status</a>
+    ·
     <a href="https://github.com/aditeyaS/grow-your-x/issues/new">Report Bug</a>
     ·
     <a href="https://github.com/aditeyaS/grow-your-x/issues/new">Request Feature</a>
@@ -82,6 +84,7 @@ https://<your_unique_app_name>.onrender.com/api/tweet
 {"secret" : "<the_secret_you_used_above>"}
 ```
 - Creat your cron job
+- (Optional) Additionally you can create a status page. [MyStatusPage](https://cldfm8g5.status.cron-job.org/) 
 
 (FYI: You can also set this job through iPhone shortcut automation)
 
