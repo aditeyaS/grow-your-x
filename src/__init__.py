@@ -7,6 +7,11 @@ from flask import Flask, request, jsonify
 
 bot = Flask(__name__)
 
+'''
+If you deploy your app on free server, your service might stop after some time
+In your CRON job you can first call this API
+Then after some time (2-3 minutes) you can call the /api/tweet endpoint
+'''
 @bot.route("/", methods=["GET"])
 def wake_up():
     response_body = {"message": "Yo! What's up?"}
