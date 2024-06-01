@@ -64,3 +64,27 @@ gunicorn main:bot
 ```
 - Add all the environemt variables
 - Most likey your app will be deployed without errors
+
+##### Setting up CRON job
+- Save the unique url of your app that you can see at top of render
+- Sign in/Sign up at [cron-job.org](https://cron-job.org/)
+- Create New cron job
+- In the URL enter
+```
+https://<your_unique_app_name>.onrender.com/api/tweet
+```
+- Set you schedule
+- You can turn on notifications if you want
+- Go to the advanced tab
+- Under request method choose POST
+- In the request body enter
+```
+{"secret" : "<the_secret_you_used_above>"}
+```
+- Creat your cron job
+
+(FYI: You can also set this job through iPhone shortcut automation)
+
+### You are done. Happy Coding. 🎉
+
+You can check your logs on render if you face issues.

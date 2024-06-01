@@ -41,11 +41,13 @@ def tweet():
         while len(generated_tweet) > 280:
             generated_tweet = open_ai_client.generate_tweet(topic=topic)
     except Exception as e:
+        # TODO: Send notification to user
         response_body = {"message": "Error in generating tweet", "error": f"{e}"}
         return jsonify(response_body), 500
     try:
         twitter_client.tweet(generated_tweet=generated_tweet)
     except Exception as e:
+        # TODO: Send notification to user
         response_body = {"message": "Error in posting tweet", "error": f"{e}"}
         return jsonify(response_body), 500
     response_body = {"message": "Tweet success", "tweet": f"{generated_tweet}"}
