@@ -3,7 +3,7 @@ import os
 from openai import OpenAI as ChatGPT
 
 class OpenAI:
-    def __init__(self):
+    def __init__(self) -> None:
         API_KEY = os.getenv("OPENAI_API_KEY")
         if not API_KEY:
             raise ApiKeyError("Missing OPENAI_API_KEY")
@@ -15,7 +15,7 @@ class OpenAI:
             project=PROJECT_ID
         )
 
-    def generate_tweet(self, topic):
+    def generate_tweet(self, topic: str) -> str:
         chat_completion = self.client.chat.completions.create(
             model= "gpt-3.5-turbo",
             messages = [

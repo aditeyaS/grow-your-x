@@ -48,6 +48,12 @@ python -m venv venv
 source .venv/bin/activate
 ```
 
+- Install the requirements
+
+```bash
+pip install -r requirements.txt
+```
+
 - Run your app
 
 ```bash
@@ -99,7 +105,7 @@ https://<your_unique_app_name>.onrender.com/api/tweet
   - In the Name enter - SECRET
   - In the Secret enter - <the_secret_you_used_above>
 - Go to the **cron-job.yml** file inside .github/workflows
-- Under schedule update [cron](http://www.cronmaker.com/) according to your needs.
+- Under schedule update [cron](http://www.cronmaker.com/) according to your needs. (GitHub cron jobs run at UTC time)
 - Push your code.
 
 (FYI: You can also set this job through iPhone shortcut automation and many other ways)

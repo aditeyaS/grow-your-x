@@ -23,5 +23,5 @@ class Twitter:
             access_token_secret=ACCESS_TOKEN_SECRET
         )
     
-    def tweet(self, generated_tweet):
+    def tweet(self, generated_tweet: str) -> None:
         self.client.create_tweet(text=generated_tweet)

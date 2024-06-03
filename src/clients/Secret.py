@@ -8,10 +8,10 @@ was lazy to implement it in the headers
 TODO: add it in headers 
 '''
 class Secret:
-    def __init__(self):
+    def __init__(self) -> None:
         self.SECRET = os.getenv("SECRET")
         if not self.SECRET:
             raise ApiKeyError("Missing Secret")
         
-    def get(self):
+    def get(self) -> str:
         return self.SECRET
